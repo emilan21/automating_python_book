@@ -11,9 +11,11 @@ def collatz(number):
         anwser = 3 * number + 1
         print(anwser)
         return anwser
-
-print('Enter a number')
-number = int(input())
+try:
+    print('Enter a number')
+    number = int(input())
+except:
+    print('You must enter an integer')
 
 while number != 1:
     number = collatz(number)
