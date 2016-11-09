@@ -4,7 +4,7 @@
 import re
 
 def passwd_stregth(password):
-    passwd_length_regex = re.compile(r'''^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+${8,8}''')
+    passwd_length_regex = re.compile(r'''^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$''')
 
     if passwd_length_regex.search(password) is None:
         return False
