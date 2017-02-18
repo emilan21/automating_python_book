@@ -10,7 +10,6 @@ def strip(string, char_to_strip):
         return new_string.group(0)
     else:
         char_strip = re.compile(r'[^{0}](.*)[^{0}]'.format(char_to_strip))
-        #char_strip = re.compile(r'[^0](.*)[^0]')
         new_string = char_strip.search(string)
         return new_string.group(0)
 
