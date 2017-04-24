@@ -1,4 +1,4 @@
-#! python3.6
+#!/usr/bin/python
 # filling_gaps.py - Finds all files with the prefix spam001.txt spam002.txt, and so on within a single
 # folder. It then locates any gaps in the numbering and renames the files to close the gaps
 
@@ -6,8 +6,11 @@ import os
 import shutil
 import re
 
-file_regex = re.compile('spam\d\d\d.txt')
+file_regex = re.compile('spam(\d)(\d)(\d).txt')
 regex_file_list = []
+hun_count = 0
+ten_cout = 0
+single_count = 1
 
 # Get directory to search from user
 print('Enter a directory:')
@@ -20,4 +23,9 @@ for file_name in  os.listdir(source_dir):
 
 # Sort list so that files are sequentual
 regex_file_list.sort()
-print(regex_file_list)
+
+# check if there are gaps in list order
+for file_name in regex_file_list:
+    for group in file_regex.findall(file_name):
+        if hun_count == group[0]:
+        print(group[0] + group[1] + group[2])
