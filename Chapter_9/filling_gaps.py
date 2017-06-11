@@ -21,7 +21,7 @@ for file_name in  os.listdir(source_dir):
     if file_regex.findall(file_name):
         regex_file_list.append(file_name)
 
-# Sort list so that files are sequentual
+# Sort list so that files are sequential
 regex_file_list.sort()
 
 # check if there are gaps in list order
