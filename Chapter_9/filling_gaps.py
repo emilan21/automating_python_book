@@ -27,3 +27,4 @@ regex_file_list.sort()
 # check if there are gaps in list order
 for file_name in regex_file_list:
     m = file_regex.match(file_name)
+    print(m.group(0))
