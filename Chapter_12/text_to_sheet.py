@@ -10,6 +10,9 @@
 # strings
 
 import openpyxl
+from openpyxl.styles import Font
+from openpyxl.styles.colors import BLACK
+from openpyxl.utils import get_column_letter
 import re
 import os
 import sys
@@ -21,16 +24,24 @@ text = re.compile(r'\w+.txt')
 
 # create work book# Save workbook
 wb = openpyxl.Workbook()
-sheet = wb.get_active_sheet()
+sheet = wb.get_sheet_by_name('Sheet')
+
+file_count = len([file for file in os.listdir(directory_path) if text.search(file)])
+row_num = 0
+col_num = 0
 
 # read files in directory
 for file in os.listdir(directory_path):
-    if text.search(file):
-        text_file = open(file, 'r') 
-        text_file_content = text_file.readlines()
-        for string in text_file_content:
-            print(string, end='')
-        text_file.close()
+        if text.search(file):
+            col_num += 1
+            text_file = open(file, 'r') 
+            text_file_content = text_file.readlines()
+            for string in text_file_content:
+                row_num += 1
+                sheet.cell(row=row_num, column=col_num).value =  string
+            text_file.close()
+            row_num = 0
+
 
 # Save workbook
 wb.save('text_to_sheet.xlsx')
