@@ -10,9 +10,6 @@
 # strings
 
 import openpyxl
-from openpyxl.styles import Font
-from openpyxl.styles.colors import BLACK
-from openpyxl.utils import get_column_letter
 import re
 import os
 import sys
