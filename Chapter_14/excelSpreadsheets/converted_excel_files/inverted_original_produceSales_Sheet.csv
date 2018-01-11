@@ -1,0 +1,9 @@
+PRODUCE,COST PER POUND,POUNDS SOLD,TOTAL
+Potatoes,0.86,21.6,"=ROUND(B2*C2,2)"
+Okra,2.26,38.6,"=ROUND(B3*C3,2)"
+Fava beans,2.69,32.8,"=ROUND(B4*C4,2)"
+Watermelon,0.66,27.3,"=ROUND(B5*C5,2)"
+Garlic,1.19,4.9,"=ROUND(B6*C6,2)"
+Parsnips,2.27,1.1,"=ROUND(B7*C7,2)"
+Asparagus,2.49,37.9,"=ROUND(B8*C8,2)"
+Avocados,3.23,9.2,"=ROUND(B9*C9,2)"
