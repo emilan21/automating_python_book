@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!python3.6
 
 # prettified_stop_watch.py - A simple stopwatch program with pretty output.
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!python3.6
 
 # multi_download_Xkcd.py - Downloads XKCD comics using multiple threads.
 
